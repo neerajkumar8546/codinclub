@@ -26,9 +26,9 @@ function getWorkingHours()
 }
 
 function calcDailyWage()
-{
-      local workHrs=$1
-      wage=$(($workHrs+$EMP_RATE_PER_HR))
+{	
+		local workHrs=$1
+		wage=$(($workHrs+$EMP_RATE_PER_HR))
         echo $wage
 }
 
@@ -43,3 +43,6 @@ done
 
 totalsalary="$( calcDailyWage $totalWorkHours )"
 echo "Daily Wage " ${empDailyWage[@]}
+echo "All Keys " ${!empDailyWage[@]}
+#echo ${dailyWage[@]}
+echo ${!dailyWage[@]}
